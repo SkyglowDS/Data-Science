@@ -2,19 +2,21 @@
 
 ## Table of contents
 1. [Introduction](#introduction)
-2. [General Guidelines](#general-concept)
-2. [Data Cleaning](#data-cleaning)
+1. [General Guidelines](#general-concept)
+1. [Data Cleaning](#data-cleaning)
     1. [Irrelevant data](#irrelevant-data)
-    2. [Duplicates](#duplicates)
-    2. [Syntax Errors](#syntax-errors)
-    3. [Outliers](#outliers)
-    4. [Missing Values](#missing-values)
-    5. [Others](#others)
-4. [Data Imbalance](#data-imbalance)    
-3. [Feature Engineering Methods](feature-engineering-methods)
-4. [Practice Examples](#practice-examples)
-5. [Toolkit](#Toolkit)
-6. [Additional Resources](#additional-resources)
+    1. [Duplicates](#duplicates)
+    1. [Syntax Errors](#syntax-errors)
+    1. [Outliers](#outliers)
+    1. [Missing Values](#missing-values)
+    1. [Others](#others)
+1. [Data Imbalance](#data-imbalance)    
+1. [Feature Engineering Methods](#feature-engineering-methods)
+    1. [Single Variable Transformations](#single-var-transforms)
+    1. [Two Variable Combinations](#two-var-combinations)
+    1. [Dimension Reduction](#dimension-reduction)
+1. [Practice Examples](#practice-examples)
+1. [Additional Resources](#additional-resources)
 
 <a name="introduction"></a>
 ## Introduction  
@@ -302,7 +304,7 @@ SMOTE look at the feature space for the minority data points and consider its *k
 
 ### Numerical Features
 
-* See Single Variable Transformations
+* See [Single Variable Transformations](#single-var-transforms)
 
 
 ### Categorical Features
@@ -343,13 +345,14 @@ Binning makes the model more robust and prevents overfitting, at the cost on the
         * Can add 1 to all data if need be. 
     * Log transformation & GLM with log link are different.
      
-    
+<a name="single-var-transforms"></a>
 ### Single Variable Transformations
 
 * x^2
 * root x
 * log x
 
+<a name="two-var-combinations"></a> 
 ### Two Variable Combinations
 
 * Add: Sum similar scaled variables
@@ -357,6 +360,7 @@ Binning makes the model more robust and prevents overfitting, at the cost on the
 * Multiply: Interactive effects
 * Divide (Scaling/normalizing)
 
+<a name="dimension-reduction"></a>
 ### Dimension Reduction
 
 These are techniques to reduce the number of input variables in training data. High-dimensionality might mean hundreds,thousands, or even millions of input variables.
