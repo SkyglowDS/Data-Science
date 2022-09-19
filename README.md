@@ -39,7 +39,7 @@ A short description of a given topic and subtopics covered. This list will be up
 
 **Definition:**  
 
->`SQL` is a standard language for accessing and manipulating databases. While SQL is the langauge, there are different implimentations of SQL. Some include MySQL, SQLite, PostgreSQL, etc, each with minor differences in syntax.
+>`SQL` is a standard language for accessing and manipulating databases. While SQL is the language, there are different implementations of SQL. Some include MySQL, SQLite, PostgreSQL, etc, each with minor differences in syntax.
 
 <a name="pyspark"></a>
 ### Pyspark 

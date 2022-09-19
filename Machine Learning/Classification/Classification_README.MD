@@ -25,6 +25,7 @@ e.g. Identifying if a patient has cancer or not, based on observed characteristi
 
 ---
 
+`Support Vector Machines (SVMs)` 
 
 <a name="#knn"></a>
 ### K-Nearest Neighbor (KNN)

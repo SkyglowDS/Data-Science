@@ -99,7 +99,7 @@ Traditionally, there are two main problems that emerges:
 
 ---
 
-In academic settings, such as kaggle, have nice clean data sets to learn machine learning processes. Real world data doesn't always like to play nice. Data sets can have missing values, syntax errors, irrelevant data, duplicates, etc. These issues need to be resolved before any feature engineering can be done.
+In academic settings, such as Kaggle, have nice clean data sets to learn machine learning processes. Real world data doesn't always like to play nice. Data sets can have missing values, syntax errors, irrelevant data, duplicates, etc. These issues need to be resolved before any feature engineering can be done.
 
 >Garbage in, garbage out
 
@@ -121,8 +121,8 @@ Irrelevant data is when the data on hand don't add any value. Generally, does no
 
 Duplicates are data points that are repeated in a given data set. This can occur due to numerous reasons. For example, the data set comes from multiple sources. Or it could be as straightforward as hitting a submit button twice on a form.
 
-<a name="standardisation"></a>
-### Standardisation
+<a name="Standardization"></a>
+### Standardization
 
 All data in each feature variable should be in a standardized format. (e.g. All age is an integer. Strings are all lower case without special characters.)
 
@@ -295,7 +295,7 @@ There are a few reasons to both downsampling and upweight the majority:
 
 <img src="https://miro.medium.com/max/960/1*XvKkuORUzmJaz042NgB0oA.png" width="" height="250">
 
-SMOTE look at the feature space for the minority data points and consider its *k* nearest neighbours. It creates new samples based on this algorithm. 
+SMOTE look at the feature space for the minority data points and consider its *k* nearest neighbors. It creates new samples based on this algorithm. 
 
 
 
@@ -348,7 +348,7 @@ Binning makes the model more robust and prevents overfitting, at the cost on the
 <a name="single-var-transforms"></a>
 ### Single Variable Transformations
 
-* x^2
+* $x^2$
 * root x
 * log x
 
@@ -363,7 +363,7 @@ Binning makes the model more robust and prevents overfitting, at the cost on the
 <a name="dimension-reduction"></a>
 ### Dimension Reduction
 
-These are techniques to reduce the number of input variables in training data. High-dimensionality might mean hundreds,thousands, or even millions of input variables.
+These are techniques to reduce the number of input variables in training data. High-dimensionality might mean hundreds, thousands, or even millions of input variables.
 
 <img src="https://blog.bioturing.com/wp-content/uploads/2018/11/Blog_pca_6b.png" width="" height="250"> 
 
@@ -374,7 +374,7 @@ These are techniques to reduce the number of input variables in training data. H
     * An unsupervised non-linear technique used for data exploration and visualizing higher-dimensional data.
 
 <a name="practice examples"></a>
-## practice examples 
+## Practice Examples 
 
 [Kaggle Credit Card Fraud](https://www.kaggle.com/mlg-ulb/creditcardfraud)
 
