@@ -1,7 +1,9 @@
+<a name="back-to-top"></a>
 # Classification
 
 ## Table of contents
 1. [Introduction](#introduction)
+1. [Logistic Regression](#logreg)
 1. [Support Vector Machines (SVM)](#svm)
     1. [](#)
     1. [](#)
@@ -17,27 +19,45 @@
 ---
 
 **Definition:**
->In machine learning and statistics, `classification` is the problem of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known.  
+
+In machine learning and statistics, `classification` is the problem of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known.  
 e.g. Identifying if a patient has cancer or not, based on observed characteristics (sex, blood pressure, etc)
 
-<a name="#svm"></a>
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
+
+<a name="logreg"></a>
+### Logistic Regression
+
+---
+
+
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
+
+<a name="svm"></a>
 ### Support Vector Machines (SVM)
 
 ---
 
 `Support Vector Machines (SVMs)` 
 
-<a name="#knn"></a>
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
+
+<a name="knn"></a>
 ### K-Nearest Neighbor (KNN)
 
 ---
 
-<a name="#trees"></a>
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
+
+<a name="trees"></a>
 ### Decision Trees
 
 ---
 
-<a name="#additional-resources"></a>
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
+
+<a name="additional-resources"></a>
 ### Additional Resources
 
 ---
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>

@@ -1,5 +1,5 @@
+<a name="back-to-top"></a>
 # General Concepts
-
 
 ## Table of contents
 1. [Data Splitting (Train-Test Split)](#train-split)
@@ -33,8 +33,9 @@ This section will cover more general concepts in machine learning that is applic
 
 ---
 
-**Definition:**  
->`Data splitting` is when a dataset is split into two or more subsets. Typically, a dataset is split into: **training**, **validation** (Sometimes known as **testing**.), and **holdout** (Sometimes also called **testing**! We will be strictly referring this dataset as the holdout.) Yes, it can get confusing. An example of data split could be 60%, 20%, 20%, (Train, test, holdout). 
+**Definition:** 
+
+`Data splitting` is when a dataset is split into two or more subsets. Typically, a dataset is split into: **training**, **validation** (Sometimes known as **testing**.), and **holdout** (Sometimes also called **testing**! We will be strictly referring this dataset as the holdout.) Yes, it can get confusing. An example of data split could be 60%, 20%, 20%, (Train, test, holdout). 
 
 <img src="../../_img/_general_concepts/train_validation_test.png" width="" height="250">
 
@@ -65,6 +66,8 @@ Generally, the process looks like the following:
 * Compare models by comparing accuracy with predicting on the test set.
 * Pick the best model and deploy.
 
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
+
 <a name="Cross Validation"></a>
 ## Cross Validation
 
@@ -80,6 +83,8 @@ Generally, the process looks like the following:
 Example of 4-fold cross validation. (K = 4)
 
 Some other cross-valid methods are **stratified cross-validation** and **time series cross-validation**
+
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 <a name="supervised"></a>
 ## Supervised Learning
@@ -109,14 +114,18 @@ Some of the commonly used supervised machine learning algorithms are as follows:
 ### Pros & Cons  
 <a name="supervised-pc"></a>
 ### Pros:  
-    * Simple process. How the model is learning is relatively understood and explainable. 
-    * The classes/input data is known. Exact classes are known.
-    * Very helpful in real world problems. E.g. Classification problems such as detecting fraud. Or predicting a numeric target.
+
+* Simple process. How the model is learning is relatively understood and explainable. 
+* The classes/input data is known. Exact classes are known.
+* Very helpful in real world problems. E.g. Classification problems such as detecting fraud. Or predicting a numeric target.
 
 ### Cons:  
-    * Requires a labeled dataset.
-        * Sometimes this can be very costly. Manual labor may be necessary.
-    * Supervised learning cannot provide unknown information/insights from the training data. 
+
+* Requires a labeled dataset.
+    * Sometimes this can be very costly. Manual labor may be necessary.
+* Supervised learning cannot provide unknown information/insights from the training data. 
+
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 <a name="unsupervised"></a>
 ## Unsupervised Learning
@@ -143,22 +152,24 @@ Some of the commonly used Unsupervised machine learning algorithms are as follow
 ### Pros & Cons  
 <a name="supervised-pc"></a>
 ### Pros:  
-    * Does not require labeled input data.
-    * Can provide new insights on datasets that might not be known.
-        * "Digs" up hidden patterns.
+* Does not require labeled input data.
+* Can provide new insights on datasets that might not be known.
+    * "Digs" up hidden patterns.
 
 ### Cons:  
-    * Acts like a "black box". The inputs are known, but the general method is unknown. Hard to explain in human terms. 
-        * Not always certain the results are useful. 
-    * Can be less accurate as there are no labeled input data to train from.  
-    * Complexity increases as additional features are added. 
+* Acts like a "black box". The inputs are known, but the general method is unknown. Hard to explain in human terms. 
+    * Not always certain the results are useful. 
+* Can be less accurate as there are no labeled input data to train from.  
+* Complexity increases as additional features are added. 
+
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 <a name="hypertuning"></a>
 ## Hypertuning
 
 ---
 
->`Hyperparameter Optimization` or more often known as `Hypertuning` is the problem of choosing a set of optimal hyperparameters for a learning algorithm. Hyperparameters contain the data that govern the training process itself. Hyperparameters cannot be directly trained from the data. They are learned during training when the loss function is optimized. 
+`Hyperparameter Optimization` or more often known as `Hypertuning` is the problem of choosing a set of optimal hyperparameters for a learning algorithm. Hyperparameters contain the data that govern the training process itself. Hyperparameters cannot be directly trained from the data. They are learned during training when the loss function is optimized. 
 
 Some examples of hyperparameters are:  
 * What should the maximum depth be for a decision tree.
@@ -172,7 +183,7 @@ There are several methods that can be used.
 <a name="grid-search"></a>
 ### Grid Search
 
->`Grid Search` is one of the most basic hyperparameter turning method. Essentially we build a model for each possible combination of all the hyperparameter values provided, evaluate each model and select the model that produces the best result. The trade off is that this method is exhaustive and can be inefficient. 
+`Grid Search` is one of the most basic hyperparameter turning method. Essentially we build a model for each possible combination of all the hyperparameter values provided, evaluate each model and select the model that produces the best result. The trade off is that this method is exhaustive and can be inefficient. 
 
 Grid Search Animated            |  Grid Search Graph
 :-------------------------:|:-------------------------:
@@ -182,7 +193,7 @@ Image courtesy of [SigOpt](https://sigopt.com/blog/common-problems-in-hyperparam
 <a name="random-search"></a>
 ### Random Search  
 
->In a `Random Search` method, unlike Grid Search, a discrete set of values is no longer provided. Instead, a statistical distribution for each hyperparameter is provided from which values may be randomly sampled. One reason to use Random Search over Grid Search is that hyperparameters are equally important. Although this may not always be the case, the assumption holds true for most datasets.   
+In a `Random Search` method, unlike Grid Search, a discrete set of values is no longer provided. Instead, a statistical distribution for each hyperparameter is provided from which values may be randomly sampled. One reason to use Random Search over Grid Search is that hyperparameters are equally important. Although this may not always be the case, the assumption holds true for most datasets.   
 
 Random Search Animated            |  Random Search Graph
 :-------------------------:|:-------------------------:
@@ -192,12 +203,14 @@ Image courtesy of [SigOpt](https://sigopt.com/blog/common-problems-in-hyperparam
 <a name="bayesian-optimization"></a>
 ### Bayesian Optimization
 
->The prior two methods esssentially are performed in isolation. (i.e. Individual experiments building model with various hyperparameter values and record the model performance for each.) One downside is that information from one experiment cannot be brought into the next. `Bayesian Optimization`, on the other hand, is known as a **sequential model-based optimization (SMBO)**. These types of optimization methods allow one to use the result of a previous iteration to improve the next.  
+The prior two methods esssentially are performed in isolation. (i.e. Individual experiments building model with various hyperparameter values and record the model performance for each.) One downside is that information from one experiment cannot be brought into the next. `Bayesian Optimization`, on the other hand, is known as a **sequential model-based optimization (SMBO)**. These types of optimization methods allow one to use the result of a previous iteration to improve the next.  
 
 Bayesian Optimization Animated            |  Bayesian Optimization Graph
 :-------------------------:|:-------------------------:
 <img src = "../../_img/_general_concepts/bayesian_optimization.gif" width="650" height="450">  |  <img src = "../../_img/_general_concepts/bayesian_optimization.png" width="650" height="450">
 Image courtesy of [SigOpt](https://sigopt.com/blog/common-problems-in-hyperparameter-optimization) | Image courtesy of [Wikipedia](https://en.wikipedia.org/wiki/File:Hyperparameter_Optimization_using_Tree-Structured_Parzen_Estimators.svg)
+
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 <a name="additional-resources"></a>
 ## Additional Resources
@@ -205,3 +218,5 @@ Image courtesy of [SigOpt](https://sigopt.com/blog/common-problems-in-hyperparam
 ---
 
 WIP
+
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>

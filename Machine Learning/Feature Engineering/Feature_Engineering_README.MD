@@ -1,3 +1,4 @@
+<a name="back-to-top"></a>
 # Feature Engineering
 
 ## Table of contents
@@ -24,17 +25,20 @@
 ---
 
 #### Definition:
->`feature Engineering` is the process of using domain knowledge to extract features from raw data. These features can be used to improve the performance of machine learning algorithms. Feature engineering can be considered as applied machine learning itself.
 
->`Feature` is an individual measurable property or characteristics of a phenomenon being observed. In statistics, this is generally known as the `independent variable`
+`feature Engineering` is the process of using domain knowledge to extract features from raw data. These features can be used to improve the performance of machine learning algorithms. Feature engineering can be considered as applied machine learning itself.
 
->`Target` or Target Variable, is the feature of a data set you are trying to predict. In statistics, this is the `dependent variable`.
+`Feature` is an individual measurable property or characteristics of a phenomenon being observed. In statistics, this is generally known as the `independent variable`
 
->`Continuous` features are features that are numerical in nature and represents a value. (e.g. A person's weight) 
+`Target` or Target Variable, is the feature of a data set you are trying to predict. In statistics, this is the `dependent variable`.
 
->`Categorical` features are features that take on a limited, usually fixed, number of possible values. (e.g. Gender, country, age group.)
+`Continuous` features are features that are numerical in nature and represents a value. (e.g. A person's weight) 
 
-In other words: `Transforming data to create model inputs.` Unfortunately there is no "handbook" for feature engineering. It depends heavily on the problem on hand and is fairly open-ended. On average, a data scientist will spend most of their time on data cleansing and feature engineering. Keeping an eye on the [80/20 rule](https://www.investopedia.com/terms/1/80-20-rule.asp) is helpful to avoid spending too much time on this process.    
+`Categorical` features are features that take on a limited, usually fixed, number of possible values. (e.g. Gender, country, age group.)
+
+In other words: `Transforming data to create model inputs.` Unfortunately there is no "handbook" for feature engineering. It depends heavily on the problem on hand and is fairly open-ended. On average, a data scientist will spend most of their time on data cleansing and feature engineering. Keeping an eye on the [80/20 rule](https://www.investopedia.com/terms/1/80-20-rule.asp) is helpful to avoid spending too much time on this process.  
+
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
   
 <a name="general-concept"></a>
 ## General Concept  
@@ -87,12 +91,13 @@ Traditionally, there are two main problems that emerges:
 
 * Types and # of features depend on model used.
     * Can include more features if model does some feature selection
-        * lasso regression, e.g., logit with || L_{1} || regularization (but not || L_{2}|| ridge)
+        * lasso regression, e.g., logit with || $L_{1}$ || regularization (but not || $L_{2}$|| ridge)
         * GBM (Gradient Boosting Machine) with backward pruning (but not random forests)
         * Stepwise regression, either forward or backward feature selection
     * Some models are invariant to monotonic variable transformations
         * Tree based approaches divide variables into two groups at each branch.
     
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 <a name="data-cleaning"></a>
 ## Data Cleaning
@@ -146,7 +151,7 @@ All data in each feature variable should be in a standardized format. (e.g. All 
 
 **Typos**: Fixing incorrectly entered data.
 
-Example:  
+Example of incorrectly entered data:  
 
 | Gender|
 | ------|
@@ -157,7 +162,8 @@ Example:
 | Fem.  |
 
 This categorical variable should only have 2 classes. In its current state, it can be considered as 5 different classes. Therefore, we need to determine the correct class and correct the issue.
->Bar graphs is a useful tool to visualize all unique values. One can notice some values are different but mean the same thing. (i.e. 'New York' and 'NY') Or, difference in capitalization. (i.e. 'trucks' and 'TRUCKS')
+
+Bar graphs is a useful tool to visualize all unique values. One can notice some values are different but mean the same thing. (i.e. 'New York' and 'NY') Or, difference in capitalization. (i.e. 'trucks' and 'TRUCKS')
 
 There are a few possible solutions:
 
@@ -169,11 +175,13 @@ Given there aren't many errors, one can manually `map` each value to "female" or
 
     dataframe['Gender'].map({'m' : 'male', 'fmale' : 'female', ...})
 
-`Pattern match:`Looking for specific patterns. (i.e. Look for the occurrences of F or f in the gender at the beginning of the string) 
+`Pattern match:` Looking for specific patterns. (i.e. Look for the occurrences of F or f in the gender at the beginning of the string) 
 
     re.sub(r"\^f\$", 'Female', 'female', flags=re.IGNORECASE)
 
-`Fuzzy matching` is an algorithm that identifies the distance between the expected string(s) and each of the given one. In this case, the number of operations needed to turn one string into another. (i.e. Turning 'm' into 'male' takes 3 operations and 5 for 'female'. Thus, it is higher likely to be 'male' )
+`Fuzzy matching` is an algorithm that identifies the distance between the expected string(s) and each of the given one. In this case, the number of operations needed to turn one string into another. Lower is better. (i.e. Turning 'm' into 'male' takes 3 operations and 5 for 'female'. Thus, it is higher likely to be 'male' )
+
+Number of steps to the correct string:
 
 | Gender| Male | Female |
 | ------| :------: | :----: |
@@ -188,7 +196,7 @@ Given there aren't many errors, one can manually `map` each value to "female" or
 
 Outliers are any data points that are distinctively different from other observations. They could be real outliers or mistakes. Outliers can mislead the training process and create less accurate models. Thus, outliers should be removed. 
 
-<img src="https://seaborn.pydata.org/_images/seaborn-boxplot-1.png" width="" height="300">
+<img src="../../_img/_feature_engineering/boxplot_with_outliers.png" width="" height="300">
 
   
 Box plots is a simple way to visualize numerical outliers.  
@@ -196,6 +204,7 @@ Box plots is a simple way to visualize numerical outliers.
     X_train.boxplot()
 
 Interquartile Range (IQR) can also be used to identify outliers in a given feature. Values that are outside a specified threshold (normally 1.5 x IDR above the 75th percentile and below the 25th percentile). 
+
     Q1 = X_train.quantile(0.25)
     Q2 = X_train.quantile(0.75)
     IQR = Q3 - Q1
@@ -233,6 +242,7 @@ There are a few ways to handle missing data:
 
 WIP
 
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 <a name="data-imbalance"></a>
 ## Data Imbalance
@@ -255,7 +265,7 @@ The imbalance might be a property of the problem domain. It could be that collec
 | Moderate | 1-20% of the data set   |
 | Severe  | <1% of the data set     |
 
-<img src="https://i.imgur.com/JqMwoM2.png" width="" height="250">
+<img src="../../_img/_feature_engineering/class_imbalance.png" width="" height="250">
 
  
 For example: Fraud detection will naturally have a class imbalance. # of fraudulent transactions will tend to occur significantly less than legitimate transactions.   
@@ -264,7 +274,7 @@ Generally, class imbalance will cause the model to favor the majority class. The
 
 ### 1. Random Undersampling and Oversampling 
 
-<img src="https://miro.medium.com/max/2400/1*ENvt_PTaH5v4BXZfd-3pMA.png" width="800" height="300">
+<img src="../../_img/_feature_engineering/undersampling_oversampling.png" width="800" height="300">
 
 * **Random Undersampling:** Randomly removing examples in the minority class
 * **Random Oversampling:** Randomly duplicating examples in the minority class
@@ -293,11 +303,11 @@ There are a few reasons to both downsampling and upweight the majority:
 
 ### 3. Synthetic Minority Over-sampling Technique (SMOTE)
 
-<img src="https://miro.medium.com/max/960/1*XvKkuORUzmJaz042NgB0oA.png" width="" height="250">
+<img src="../../_img/_feature_engineering/smote_diagram.png" width="" height="250">
 
 SMOTE look at the feature space for the minority data points and consider its *k* nearest neighbors. It creates new samples based on this algorithm. 
 
-
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 <a name="feature-engineering-methods"></a>
 ## Feature Engineering Methods
@@ -365,7 +375,7 @@ Binning makes the model more robust and prevents overfitting, at the cost on the
 
 These are techniques to reduce the number of input variables in training data. High-dimensionality might mean hundreds, thousands, or even millions of input variables.
 
-<img src="https://blog.bioturing.com/wp-content/uploads/2018/11/Blog_pca_6b.png" width="" height="250"> 
+<img src="../../_img/_feature_engineering/pca.png" width="" height="250"> 
 
 * PCA (Principal component analysis)
     * Converts n-dimensions of data into k-dimensions, where n > k, while maintaining as much information from the original dataset.   
@@ -373,10 +383,14 @@ These are techniques to reduce the number of input variables in training data. H
 * TSNE  (t-distributed stochastic neighbor embedding)
     * An unsupervised non-linear technique used for data exploration and visualizing higher-dimensional data.
 
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
+
 <a name="practice examples"></a>
 ## Practice Examples 
 
 [Kaggle Credit Card Fraud](https://www.kaggle.com/mlg-ulb/creditcardfraud)
+
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 <a name="additional-resources"></a>
 ## Additional Resources 
@@ -385,3 +399,5 @@ These are techniques to reduce the number of input variables in training data. H
 * [Feature Engineering - David Epstein ODSC Boston 2015](https://opendatascience.com/feature-engineering-david-epstein/)
 * [Fuzzy matching at scale](https://towardsdatascience.com/fuzzy-matching-at-scale-84f2bfd0c536)
 * [The Quartz guide to bad data](https://github.com/Quartz/bad-data-guide)
+
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
