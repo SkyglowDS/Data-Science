@@ -37,7 +37,7 @@ There are many types of neural networks. This image gives a general overview:
 <a name="cnn-definition"></a>
 ### Definition 
 
-A convolutional neural network consists of an input and an output layer, as well as multiple hidden layers. The hidden layers of a CNN typically consist of a series of convolutional layers that convolve with a multiplication or other dot product. The activation function is commonly a RELU layer, and is subsequently followed by additional convolutions such as pooling layers, fully connected layers and normalization layers, referred to as hidden layers because their inputs and outputs are masked by the activation function and final convolution. The final convolution, in turn, often involves backpropagation in order to more accurately weight the end product.
+>A convolutional neural network consists of an input and an output layer, as well as multiple hidden layers. The hidden layers of a CNN typically consist of a series of convolutional layers that convolve with a multiplication or other dot product. The activation function is commonly a RELU layer, and is subsequently followed by additional convolutions such as pooling layers, fully connected layers and normalization layers, referred to as hidden layers because their inputs and outputs are masked by the activation function and final convolution. The final convolution, in turn, often involves backpropagation in order to more accurately weight the end product.
 
 <a name="cnn-use"></a>
 ### Common use case:
@@ -135,7 +135,7 @@ This is an example of a max pooling layer. The size of the pool is 2x2.
 
 <!-- ![Optimizers](https://towardsdatascience.com/teach-yourself-data-science-in-10-years-3-lessons-from-peter-norvig-director-of-machine-867e3218ce42) -->
 
-Optimization algorithms helps minimize or maximize an Error function (aka Objective function)  
+>Optimization algorithms helps minimize or maximize an Error function (aka Objective function)  
 
 <p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
@@ -154,21 +154,21 @@ Example of metrics provided by keras:
 
 #### Loss  
 
-Neural networks are mostly trained using gradient methods by an iterative process of decreasing a loss function. This can also be referred to as a cost function. The value calculated by the loss function is referred to as simply `loss`. The `loss` is designed with two crucial properties: 1. The less its value is, the better the model fits the given data. 2. It should be differentiable. 
+>Neural networks are mostly trained using gradient methods by an iterative process of decreasing a loss function. This can also be referred to as a cost function. The value calculated by the loss function is referred to as simply `loss`. The `loss` is designed with two crucial properties: 1. The less its value is, the better the model fits the given data. 2. It should be differentiable. 
 
 A loss value can start at 1.2243 as in the example above and decrease down to < 1 as the model continues to train. 
 
 #### Accuracy
 
-`Accuracy` metric is only valid for classification tasks. `Accuracy` is not differentiable nor continuous so it cannot be directly used to optimize the model. It denotes what percent is correctly classified to its true values. Higher is better.   
+>`Accuracy` metric is only valid for classification tasks. `Accuracy` is not differentiable nor continuous so it cannot be directly used to optimize the model. It denotes what percent is correctly classified to its true values. Higher is better.   
 
 #### val_loss & val_accuracy
 
-The definitions are the same as `Loss` and `Accuracy`. The only difference is that these are applied to validation set.  
+>The definitions are the same as `Loss` and `Accuracy`. The only difference is that these are applied to validation set.  
 
 #### Early Stopping
 
-Early stopping is a method that allows an arbitrary large number of training epochs and stops the training once the model performance stops improving on the validation dataset. 
+>Early stopping is a method that allows an arbitrary large number of training epochs and stops the training once the model performance stops improving on the validation dataset. 
 
 Examples of Early stopping
 

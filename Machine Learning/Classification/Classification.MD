@@ -20,7 +20,7 @@
 
 **Definition:**
 
-In machine learning and statistics, `classification` is the problem of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known.  
+>In machine learning and statistics, `classification` is the problem of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known.  
 e.g. Identifying if a patient has cancer or not, based on observed characteristics (sex, blood pressure, etc)
 
 <p align="right">(<a href="#back-to-top">back to top</a>)</p>

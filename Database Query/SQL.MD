@@ -63,14 +63,19 @@ Sample code are based on Hive/Trino SQL flavor. Slight variation in functions an
 
 Based on common insurance queries. 
 
-`top_5_causes.sql`: Returns the claim count and average total incurred for the top 5 cause of loss where total incurred is greater than 100k. 
+`top_5_causes.sql`
+>Returns the claim count and average total incurred for the top 5 cause of loss where total incurred is greater than 100k. 
 
-`identify_location`: Returns the address of a client, if avaliable, based on two different tables.
+`identify_location`
+>Returns the address of a client, if avaliable, based on two different tables.
 
-`keyword_search.sql`: Finds keywords in claim description and returns the claim counts and average total incurred.
+`keyword_search.sql`
+>Finds keywords in claim description and returns the claim counts and average total incurred.
 
-`multiple_keyword_search.sql`: Finds multiple keywords and returns the years of claims and claim counts per keyword for each account.
+`multiple_keyword_search.sql`
+>Finds multiple keywords and returns the years of claims and claim counts per keyword for each account.
 
-`metrics.sql`: Returns various claim metrics based on specific claim requirements. 
+`metrics.sql`
+>Returns various claim metrics based on specific claim requirements. 
 
 

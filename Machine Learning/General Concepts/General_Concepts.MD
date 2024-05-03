@@ -35,7 +35,7 @@ This section will cover more general concepts in machine learning that is applic
 
 **Definition:** 
 
-`Data splitting` is when a dataset is split into two or more subsets. Typically, a dataset is split into: **training**, **validation** (Sometimes known as **testing**.), and **holdout** (Sometimes also called **testing**! We will be strictly referring this dataset as the holdout.) Yes, it can get confusing. An example of data split could be 60%, 20%, 20%, (Train, test, holdout). 
+>`Data splitting` is when a dataset is split into two or more subsets. Typically, a dataset is split into: **training**, **validation** (Sometimes known as **testing**.), and **holdout** (Sometimes also called **testing**! We will be strictly referring this dataset as the holdout.) Yes, it can get confusing. An example of data split could be 60%, 20%, 20%, (Train, test, holdout). 
 
 <img src="../../_img/_general_concepts/train_validation_test.png" width="" height="250">
 
@@ -76,7 +76,7 @@ Generally, the process looks like the following:
 **Definition:**  
 >`Cross-validation` is a resampling procedure used to evaluate machine learning models on a limited data sample. There are different types of cross-validation methods. For example: **K-folds**, or **Leave-one-out**. Instead of a traditional train-test-holdout, it becomes cross-validation-holdout. 
 
->In **K-folds cross-validation**, the dataset is split into k different "blocks". One block is treated as the validation, and the rest is the training. This is repeated until all blocks are used. **Leave-one-out** is similar to k-folds. However, instead of blocks, each individual row is treated as a "block". As a tradeoff, this method takes a long time to run. 
+In **K-folds cross-validation**, the dataset is split into k different "blocks". One block is treated as the validation, and the rest is the training. This is repeated until all blocks are used. **Leave-one-out** is similar to k-folds. However, instead of blocks, each individual row is treated as a "block". As a tradeoff, this method takes a long time to run. 
 
 <img src="../../_img/_general_concepts/k_fold_validation.jpg" width="" height="450">  
 
@@ -169,7 +169,7 @@ Some of the commonly used Unsupervised machine learning algorithms are as follow
 
 ---
 
-`Hyperparameter Optimization` or more often known as `Hypertuning` is the problem of choosing a set of optimal hyperparameters for a learning algorithm. Hyperparameters contain the data that govern the training process itself. Hyperparameters cannot be directly trained from the data. They are learned during training when the loss function is optimized. 
+>`Hyperparameter Optimization` or more often known as `Hypertuning` is the problem of choosing a set of optimal hyperparameters for a learning algorithm. Hyperparameters contain the data that govern the training process itself. Hyperparameters cannot be directly trained from the data. They are learned during training when the loss function is optimized. 
 
 Some examples of hyperparameters are:  
 * What should the maximum depth be for a decision tree.
@@ -183,7 +183,7 @@ There are several methods that can be used.
 <a name="grid-search"></a>
 ### Grid Search
 
-`Grid Search` is one of the most basic hyperparameter turning method. Essentially we build a model for each possible combination of all the hyperparameter values provided, evaluate each model and select the model that produces the best result. The trade off is that this method is exhaustive and can be inefficient. 
+>`Grid Search` is one of the most basic hyperparameter turning method. Essentially we build a model for each possible combination of all the hyperparameter values provided, evaluate each model and select the model that produces the best result. The trade off is that this method is exhaustive and can be inefficient. 
 
 Grid Search Animated            |  Grid Search Graph
 :-------------------------:|:-------------------------:
@@ -193,7 +193,7 @@ Image courtesy of [SigOpt](https://sigopt.com/blog/common-problems-in-hyperparam
 <a name="random-search"></a>
 ### Random Search  
 
-In a `Random Search` method, unlike Grid Search, a discrete set of values is no longer provided. Instead, a statistical distribution for each hyperparameter is provided from which values may be randomly sampled. One reason to use Random Search over Grid Search is that hyperparameters are equally important. Although this may not always be the case, the assumption holds true for most datasets.   
+>In a `Random Search` method, unlike Grid Search, a discrete set of values is no longer provided. Instead, a statistical distribution for each hyperparameter is provided from which values may be randomly sampled. One reason to use Random Search over Grid Search is that hyperparameters are equally important. Although this may not always be the case, the assumption holds true for most datasets.   
 
 Random Search Animated            |  Random Search Graph
 :-------------------------:|:-------------------------:
@@ -203,7 +203,7 @@ Image courtesy of [SigOpt](https://sigopt.com/blog/common-problems-in-hyperparam
 <a name="bayesian-optimization"></a>
 ### Bayesian Optimization
 
-The prior two methods esssentially are performed in isolation. (i.e. Individual experiments building model with various hyperparameter values and record the model performance for each.) One downside is that information from one experiment cannot be brought into the next. `Bayesian Optimization`, on the other hand, is known as a **sequential model-based optimization (SMBO)**. These types of optimization methods allow one to use the result of a previous iteration to improve the next.  
+>The prior two methods esssentially are performed in isolation. (i.e. Individual experiments building model with various hyperparameter values and record the model performance for each.) One downside is that information from one experiment cannot be brought into the next. `Bayesian Optimization`, on the other hand, is known as a **sequential model-based optimization (SMBO)**. These types of optimization methods allow one to use the result of a previous iteration to improve the next.  
 
 Bayesian Optimization Animated            |  Bayesian Optimization Graph
 :-------------------------:|:-------------------------:

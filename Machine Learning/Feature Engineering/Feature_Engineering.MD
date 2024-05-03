@@ -8,6 +8,7 @@
     1. [Irrelevant data](#irrelevant-data)
     1. [Duplicates](#duplicates)
     1. [Syntax Errors](#syntax-errors)
+    1. [Standardization](#standardization)
     1. [Outliers](#outliers)
     1. [Missing Values](#missing-values)
     1. [Others](#others)
@@ -26,15 +27,15 @@
 
 #### Definition:
 
-`feature Engineering` is the process of using domain knowledge to extract features from raw data. These features can be used to improve the performance of machine learning algorithms. Feature engineering can be considered as applied machine learning itself.
+>`Feature Engineering` is the process of using domain knowledge to extract features from raw data. These features can be used to improve the performance of machine learning algorithms. Feature engineering can be considered as applied machine learning itself.
 
-`Feature` is an individual measurable property or characteristics of a phenomenon being observed. In statistics, this is generally known as the `independent variable`
+>`Feature` is an individual measurable property or characteristics of a phenomenon being observed. In statistics, this is generally known as the `independent variable`
 
-`Target` or Target Variable, is the feature of a data set you are trying to predict. In statistics, this is the `dependent variable`.
+>`Target` or Target Variable, is the feature of a data set you are trying to predict. In statistics, this is the `dependent variable`.
 
-`Continuous` features are features that are numerical in nature and represents a value. (e.g. A person's weight) 
+>`Continuous` features are features that are numerical in nature and represents a value. (e.g. A person's weight) 
 
-`Categorical` features are features that take on a limited, usually fixed, number of possible values. (e.g. Gender, country, age group.)
+>`Categorical` features are features that take on a limited, usually fixed, number of possible values. (e.g. Gender, country, age group.)
 
 In other words: `Transforming data to create model inputs.` Unfortunately there is no "handbook" for feature engineering. It depends heavily on the problem on hand and is fairly open-ended. On average, a data scientist will spend most of their time on data cleansing and feature engineering. Keeping an eye on the [80/20 rule](https://www.investopedia.com/terms/1/80-20-rule.asp) is helpful to avoid spending too much time on this process.  
 
@@ -119,17 +120,17 @@ In academic settings, such as Kaggle, have nice clean data sets to learn machine
 <a name="irrelevant-data"></a>
 ### Irrelevant data
 
-Irrelevant data is when the data on hand don't add any value. Generally, does not fit under the context of the problem being solved. For example, if you were doing a study on one city, other cities would be not be included. **Only if** one is sure the data is unimportant, it can be dropped. There is value in asking someone who is a domain expert prior to dropping the given data. 
+>Irrelevant data is when the data on hand don't add any value. Generally, does not fit under the context of the problem being solved. For example, if you were doing a study on one city, other cities would be not be included. **Only if** one is sure the data is unimportant, it can be dropped. There is value in asking someone who is a domain expert prior to dropping the given data. 
 
 <a name="duplicates"></a>
 ### Duplicates
 
-Duplicates are data points that are repeated in a given data set. This can occur due to numerous reasons. For example, the data set comes from multiple sources. Or it could be as straightforward as hitting a submit button twice on a form.
+>Duplicates are data points that are repeated in a given data set. This can occur due to numerous reasons. For example, the data set comes from multiple sources. Or it could be as straightforward as hitting a submit button twice on a form.
 
-<a name="Standardization"></a>
+<a name="standardization"></a>
 ### Standardization
 
-All data in each feature variable should be in a standardized format. (e.g. All age is an integer. Strings are all lower case without special characters.)
+>All data in each feature variable should be in a standardized format. (e.g. All age is an integer. Strings are all lower case without special characters.)
 
 <a name="syntax-errors"></a>
 ### Syntax Errors
@@ -194,7 +195,7 @@ Number of steps to the correct string:
 <a name="outliers"></a>
 ### Outliers
 
-Outliers are any data points that are distinctively different from other observations. They could be real outliers or mistakes. Outliers can mislead the training process and create less accurate models. Thus, outliers should be removed. 
+>Outliers are any data points that are distinctively different from other observations. They could be real outliers or mistakes. Outliers can mislead the training process and create less accurate models. Thus, outliers should be removed. 
 
 <img src="../../_img/_feature_engineering/boxplot_with_outliers.png" width="" height="300">
 
@@ -213,7 +214,7 @@ Interquartile Range (IQR) can also be used to identify outliers in a given featu
 <a name="missing-values"></a>
 ### Missing Values
 
-Large data sets rarely tends to be perfectly filled. There are many reasons for why there are missing values. For example, the person collecting data may have forgotten. Missing data needs to be handled as they affect the training. 
+>Large data sets rarely tends to be perfectly filled. There are many reasons for why there are missing values. For example, the person collecting data may have forgotten. Missing data needs to be handled as they affect the training. 
 
 There are a few ways to handle missing data: 
 
@@ -249,7 +250,7 @@ WIP
 
 ---
 
-A classification data set with skewed class proportions is called imbalanced. The classes that make up a larger proportion of the data set are called `majority classes`. The smaller proportion is known as `minority classes`. 
+>A classification data set with skewed class proportions is called imbalanced. The classes that make up a larger proportion of the data set are called `majority classes`. The smaller proportion is known as `minority classes`. 
 
 There are two main causes for imbalanced data: Data sampling, and properties of the domain.   
 
@@ -332,9 +333,10 @@ Converting nonnumeric to numeric
 
 ### Binning/Bucketing
 
+>Binning makes the model more robust and prevents overfitting, at the cost on the performance. Binning data causes the data to be more regularized and loses some information.
+
 Works for both Categorical and Numerical data.
 
-Binning makes the model more robust and prevents overfitting, at the cost on the performance. Binning data causes the data to be more regularized and loses some information.
 
 ### Normalization 
 
@@ -373,7 +375,7 @@ Binning makes the model more robust and prevents overfitting, at the cost on the
 <a name="dimension-reduction"></a>
 ### Dimension Reduction
 
-These are techniques to reduce the number of input variables in training data. High-dimensionality might mean hundreds, thousands, or even millions of input variables.
+>These are techniques to reduce the number of input variables in training data. High-dimensionality might mean hundreds, thousands, or even millions of input variables.
 
 <img src="../../_img/_feature_engineering/pca.png" width="" height="250"> 
 

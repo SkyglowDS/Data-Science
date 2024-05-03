@@ -43,7 +43,7 @@ A short description of a given topic and subtopics covered. This list will be up
 
 **Definition:**  
 
-`SQL` is a standard language for accessing and manipulating databases. While SQL is the language, there are different implementations of SQL. Some include MySQL, SQLite, PostgreSQL, etc, each with minor differences in syntax.
+>`SQL` is a standard language for accessing and manipulating databases. While SQL is the language, there are different implementations of SQL. Some include MySQL, SQLite, PostgreSQL, etc, each with minor differences in syntax.
 
 <a name="pyspark"></a>
 ### Pyspark 
@@ -53,7 +53,7 @@ A short description of a given topic and subtopics covered. This list will be up
 
 **Definition:**
 
-`Pyspark` is the Python API for Apache Spark, an open source, distributed computing framework and set of libraries for real-time, large-scale data processing. PySpark is a good language used to create more scalable analyses and pipelines. Pyspark provides similar functionalities to Pandas.
+>`Pyspark` is the Python API for Apache Spark, an open source, distributed computing framework and set of libraries for real-time, large-scale data processing. PySpark is a good language used to create more scalable analyses and pipelines. Pyspark provides similar functionalities to Pandas.
 
 <p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
@@ -78,7 +78,7 @@ This section will cover more general concepts in machine learning that is applic
 
 **Definition:**  
 
-`Feature engineering` is the process of using domain knowledge to extract features from raw data. These features can be used to improve the performance of machine learning algorithms. Feature engineering can be considered as applied machine learning itself.
+>`Feature engineering` is the process of using domain knowledge to extract features from raw data. These features can be used to improve the performance of machine learning algorithms. Feature engineering can be considered as applied machine learning itself.
 
 
 <a name="regression"></a>
@@ -89,7 +89,8 @@ This section will cover more general concepts in machine learning that is applic
 
 **Definition:**
 
-In statistical modeling, `regression analysis` is a set of statistical processes for estimating the relationships between a dependent variable (often called the 'outcome variable') and one or more independent variables (often called 'predictors', 'covariates', or 'features'). The most common form of regression analysis is linear regression, in which one finds the line (or a more complex linear combination) that most closely fits the data according to a specific mathematical criterion.  
+>In statistical modeling, `regression analysis` is a set of statistical processes for estimating the relationships between a dependent variable (often called the 'outcome variable') and one or more independent variables (often called 'predictors', 'covariates', or 'features'). The most common form of regression analysis is linear regression, in which one finds the line (or a more complex linear combination) that most closely fits the data according to a specific mathematical criterion.  
+
 e.g. Determining housing prices based on multiple features. (i.e. Total square feet, # of kitchens, Year built, etc.)  
 
 
@@ -101,7 +102,8 @@ e.g. Determining housing prices based on multiple features. (i.e. Total square f
 
 **Definition:**
 
-In machine learning and statistics, `classification` is the problem of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known.  
+>In machine learning and statistics, `classification` is the problem of identifying to which of a set of categories (sub-populations) a new observation belongs, on the basis of a training set of data containing observations (or instances) whose category membership is known.  
+
 e.g. Identifying if a patient has cancer or not, based on observed characteristics (sex, blood pressure, etc)
 
 
@@ -122,7 +124,8 @@ Temp
 
 **Definition**
 
-A `neural network` is a computational model inspired by the human brain. It comprises interconnected nodes (neurons) organized in layers. Each neuron processes input data, applies weights, and passes the result through an activation function, producing an output. Training involves adjusting weights through algorithms like backpropagation to minimize errors.   
+>A `neural network` is a computational model inspired by the human brain. It comprises interconnected nodes (neurons) organized in layers. Each neuron processes input data, applies weights, and passes the result through an activation function, producing an output. Training involves adjusting weights through algorithms like backpropagation to minimize errors.   
+
 e.g. CNN, RNN, GANs
   
 <a name="computer-vision"></a>
@@ -133,7 +136,8 @@ e.g. CNN, RNN, GANs
 
 **Definition:**  
 
-`Computer vision` is an interdisciplinary scientific field that deals with how computers can be made to gain high-level understanding from digital images or videos. From the perspective of engineering, it seeks to automate tasks that the human visual system can do.  
+>`Computer vision` is an interdisciplinary scientific field that deals with how computers can be made to gain high-level understanding from digital images or videos. From the perspective of engineering, it seeks to automate tasks that the human visual system can do.  
+
 e.g. Tesla's Autopilot; ability to identify pedestrians   
 
 <p align="right">(<a href="#back-to-top">back to top</a>)</p>
