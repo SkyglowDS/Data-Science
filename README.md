@@ -1,5 +1,5 @@
+<a name="back-to-top"></a>
 # Data Science
-
 
 ## Table of contents
 1. [Introduction](#introduction)
@@ -29,6 +29,8 @@ Welcome to my one-stop shop for data science. This repository will be used to ke
 
 A short description of a given topic and subtopics covered. This list will be updated when new topics become available. Topics are listed in no particular order.  
 
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
+
 <a name="database"></a>
 ## Database Query
 
@@ -53,6 +55,7 @@ A short description of a given topic and subtopics covered. This list will be up
 
 `Pyspark` is the Python API for Apache Spark, an open source, distributed computing framework and set of libraries for real-time, large-scale data processing. PySpark is a good language used to create more scalable analyses and pipelines. Pyspark provides similar functionalities to Pandas.
 
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 <a name="machine-learning"></a>
 ## Machine Learning Concepts
@@ -133,6 +136,7 @@ e.g. CNN, RNN, GANs
 `Computer vision` is an interdisciplinary scientific field that deals with how computers can be made to gain high-level understanding from digital images or videos. From the perspective of engineering, it seeks to automate tasks that the human visual system can do.  
 e.g. Tesla's Autopilot; ability to identify pedestrians   
 
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 <a name="data-visualization"></a>
 ## Data Visualization 
@@ -142,6 +146,8 @@ e.g. Tesla's Autopilot; ability to identify pedestrians
 Temp   
 -EDA
 
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
+
 <a name="data-aggregation"></a>
 ## Data Aggregation
 
@@ -149,6 +155,7 @@ Temp
 
 WIP 
 
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 <a name="documentation"></a>
 ## Documentation 
@@ -157,6 +164,8 @@ WIP
 
 Documentation best practices and templates. 
 
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
+
 <a name="toolkit"></a>
 ## Tool kit 
 
@@ -164,6 +173,7 @@ Documentation best practices and templates.
 
 Prewritten functions/format  
 
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
 
 <a name="additional-resources"></a>
 ## Additional Resources
@@ -173,3 +183,5 @@ Prewritten functions/format
 * [Google's Crash Course](https://developers.google.com/machine-learning/crash-course/representation/video-lecture)
 
 -
+
+<p align="right">(<a href="#back-to-top">back to top</a>)</p>
