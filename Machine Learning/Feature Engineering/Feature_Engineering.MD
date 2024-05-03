@@ -7,8 +7,8 @@
 1. [Data Cleaning](#data-cleaning)
     1. [Irrelevant data](#irrelevant-data)
     1. [Duplicates](#duplicates)
-    1. [Syntax Errors](#syntax-errors)
     1. [Standardization](#standardization)
+    1. [Data Inconsistency](#data-inconsistency)
     1. [Outliers](#outliers)
     1. [Missing Values](#missing-values)
     1. [Others](#others)
@@ -132,8 +132,8 @@ In academic settings, such as Kaggle, have nice clean data sets to learn machine
 
 >All data in each feature variable should be in a standardized format. (e.g. All age is an integer. Strings are all lower case without special characters.)
 
-<a name="syntax-errors"></a>
-### Syntax Errors
+<a name="data-inconsistency"></a>
+### Data Inconsistency
 
 **Remove white spaces:** Extra white spaces at the beginning or end of a string should be removed.  
 
